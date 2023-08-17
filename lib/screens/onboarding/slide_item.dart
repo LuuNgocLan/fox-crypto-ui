@@ -35,7 +35,7 @@ class SlideItem extends StatelessWidget {
                   style: const TextStyle(
                       fontSize: 36,
                       fontFamily: AppTextStyle.poppinsSemiBold,
-                      color: AppColors.acccent),
+                      color: AppColors.primary),
                 ),
               ],
             ),

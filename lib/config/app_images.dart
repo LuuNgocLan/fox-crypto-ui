@@ -6,4 +6,5 @@ class AppImages {
   static const imgOnboard2 = '$path/img_onboarding2.png';
   static const imgOnboard3 = '$path/img_onboarding3.png';
   static const icArrow = '$path/ic_arrow.svg';
+  static const imgStarted = '$path/img_started.png';
 }

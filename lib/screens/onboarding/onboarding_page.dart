@@ -25,8 +25,9 @@ class OnboardingPage extends StatelessWidget {
           image: AppImages.imgOnboard3),
     ];
     return SafeArea(
+      top: false,
       child: Scaffold(
-        backgroundColor: AppColors.primary,
+        backgroundColor: AppColors.background,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -39,7 +40,7 @@ class OnboardingPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 20,
                     fontFamily: AppTextStyle.poppinsRegular,
-                    color: AppColors.acccent),
+                    color: AppColors.primary),
               ),
             ),
             const SizedBox(height: 40),
@@ -64,13 +65,13 @@ class OnboardingPage extends StatelessWidget {
                   effect: const ExpandingDotsEffect(
                     dotHeight: 4,
                     dotWidth: 8,
-                    activeDotColor: AppColors.acccent,
+                    activeDotColor: AppColors.primary,
                   ), // your preferred effect
                 ),
                 const Spacer(),
                 Container(
                   decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: AppColors.acccent),
+                      shape: BoxShape.circle, color: AppColors.primary),
                   height: 48,
                   width: 48,
                   child: SvgPicture.asset(AppImages.icArrow),
