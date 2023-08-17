@@ -14,11 +14,14 @@ class OnboardingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final PageController pageController = PageController();
     final List<Onboarding> data = [
-      Onboarding(title: "Welcome To \nFoxcrypto", image: AppImages.imgOnboard1),
       Onboarding(
-          title: "Transaction \nSecurity ", image: AppImages.imgOnboard2),
+          normalText: "Welcome To \nFox",
+          coloredText: "crypto",
+          image: AppImages.imgOnboard1),
       Onboarding(
-          title: "Fast and reliable \nMarket updated",
+          normalText: "Transaction \nSecurity ", image: AppImages.imgOnboard2),
+      Onboarding(
+          normalText: "Fast and reliable \nMarket updated",
           image: AppImages.imgOnboard3),
     ];
     return SafeArea(
@@ -45,7 +48,7 @@ class OnboardingPage extends StatelessWidget {
                   controller: pageController,
                   children: data
                       .map(
-                        (e) => SlideItem(e.image, e.title),
+                        (e) => SlideItem(e.image, e.normalText, e.coloredText),
                       )
                       .toList()),
             ),
