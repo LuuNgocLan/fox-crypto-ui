@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/screens/onboarding/onboading.dart';
 import 'package:fox_crypto_ui/screens/onboarding/slide_item.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -32,7 +33,7 @@ class OnboardingPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            const SizedBox(height: 16),
+            const SizedBox(height: 36),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 24),
               child: Text(
@@ -69,12 +70,20 @@ class OnboardingPage extends StatelessWidget {
                   ), // your preferred effect
                 ),
                 const Spacer(),
-                Container(
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: AppColors.primary),
-                  height: 48,
-                  width: 48,
-                  child: SvgPicture.asset(AppImages.icArrow),
+                InkWell(
+                  customBorder: const CircleBorder(),
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.started);
+                  },
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: AppColors.primary,
+                    ),
+                    height: 48,
+                    width: 48,
+                    child: SvgPicture.asset(AppImages.icArrow),
+                  ),
                 ),
                 const SizedBox(width: 24),
               ],

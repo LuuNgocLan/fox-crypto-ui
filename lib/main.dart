@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
-import 'package:fox_crypto_ui/screens/get_started/get_started_page.dart';
+import 'package:fox_crypto_ui/screens/onboarding/onboarding_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,25 +15,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: "CryptoFox",
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: AppColors.primary,
-            primary: AppColors.primary,
-            onPrimary: AppColors.background,
-            tertiary: AppColors.primary,
-            background: AppColors.background,
-          ),
-          useMaterial3: true,
-          appBarTheme: const AppBarTheme(
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: Colors.transparent,
-              statusBarIconBrightness: Brightness.light,
-              statusBarBrightness: Brightness.dark,
-            ),
+      title: "CryptoFox",
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColors.primary,
+          primary: AppColors.primary,
+          onPrimary: AppColors.background,
+          tertiary: AppColors.primary,
+          background: AppColors.background,
+        ),
+        useMaterial3: true,
+        appBarTheme: const AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.light,
+            statusBarBrightness: Brightness.dark,
           ),
         ),
-        routes: Routes.routes,
-        home: const GetStartedPage());
+      ),
+      initialRoute: Routes.onboarding,
+      routes: Routes.routes,
+    );
   }
 }
