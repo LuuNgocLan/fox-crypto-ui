@@ -8,14 +8,14 @@ import 'package:fox_crypto_ui/config/app_colors.dart';
 ///
 
 class AppTextStyle {
+  AppTextStyle._();
   static const String poppinsRegular = "Poppins-Regular";
   static const String poppinsMedium = "Poppins-Medium";
   static const String poppinsSemiBold = "Poppins-SemiBold";
   static const String poppinsBold = "Poppins-Bold";
 
   static final titleLarge = TextStyle(
-    fontSize: 36,
-    color: AppColors.textColor,
-    fontFamily: poppinsRegular,
-  );
+      fontSize: 36,
+      fontFamily: AppTextStyle.poppinsMedium,
+      color: AppColors.textColor);
 }
