@@ -48,7 +48,9 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 72.0),
               CommonButton(
-                onAction: () {},
+                onAction: () {
+                  Navigator.pushNamed(context, Routes.verificationCode);
+                },
                 label: "Log in",
               ),
               const Spacer(),

@@ -3,6 +3,7 @@ import 'package:fox_crypto_ui/screens/get_started/get_started_page.dart';
 import 'package:fox_crypto_ui/screens/login/login_page.dart';
 import 'package:fox_crypto_ui/screens/onboarding/onboarding_page.dart';
 import 'package:fox_crypto_ui/screens/sign_up/sign_up_page.dart';
+import 'package:fox_crypto_ui/screens/verification_code/verification_code_page.dart';
 
 //Note:  Warning: When using initialRoute, don’t define a home property on MaterialApp
 class Routes {
@@ -12,11 +13,23 @@ class Routes {
   static const String started = '/started';
   static const String login = '/login';
   static const String signup = '/signup';
+  static const String verificationCode = '/verificationCode';
+  static const String accountVerifyStep1 = '/accountVerifyStep1';
+  static const String accountVerifyStep2 = '/accountVerifyStep2';
+  static const String accountVerifyStep3 = '/accountVerifyStep3';
+  static const String completed = '/completed';
+  static const String home = '/home';
 
   static final routes = <String, WidgetBuilder>{
     onboarding: (BuildContext context) => const OnboardingPage(),
-    started: (BuildContext  context) => const GetStartedPage(),
-    login: (BuildContext  context) => const LoginPage(),
-    signup: (BuildContext  context) => const SignUpPage(),
+    started: (BuildContext context) => const GetStartedPage(),
+    login: (BuildContext context) => const LoginPage(),
+    signup: (BuildContext context) => const SignUpPage(),
+    verificationCode: (BuildContext context) => const VerificationCodePage(),
+    accountVerifyStep1: (BuildContext context) => const SignUpPage(),
+    accountVerifyStep2: (BuildContext context) => const SignUpPage(),
+    accountVerifyStep3: (BuildContext context) => const SignUpPage(),
+    completed: (BuildContext context) => const SignUpPage(),
+    home: (BuildContext context) => const SignUpPage(),
   };
 }
