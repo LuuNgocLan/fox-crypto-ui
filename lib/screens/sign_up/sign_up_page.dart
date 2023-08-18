@@ -5,6 +5,7 @@ import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
+import 'package:fox_crypto_ui/shared_view/common_checkbox.dart';
 import 'package:fox_crypto_ui/shared_view/common_edit_text.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -48,65 +49,55 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16.0),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 22.0,
-                    width: 22.0,
-                    child: Checkbox(
-                      value: isAccepted,
-                      onChanged: (value) {
-                        isAccepted = !isAccepted;
-                      },
+              CommonCheckbox(
+                content: RichText(
+                  selectionColor: AppColors.primary,
+                  text: TextSpan(
+                    text: "Accept ",
+                    style: const TextStyle(
+                      color: AppColors.placeHolder,
+                      fontFamily: AppTextStyle.poppinsRegular,
+                      fontSize: 16.0,
                     ),
-                  ),
-                  const SizedBox(width: 8.0),
-                  RichText(
-                    selectionColor: AppColors.primary,
-                    text: TextSpan(
-                        text: "Accept ",
+                    children: [
+                      TextSpan(
+                        text: "Terms of Use",
                         style: const TextStyle(
+                          color: AppColors.primary,
+                          fontFamily: AppTextStyle.poppinsRegular,
+                          fontSize: 16.0,
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            print("Terms of Use");
+                          },
+                      ),
+                      const TextSpan(
+                        text: " & ",
+                        style: TextStyle(
                           color: AppColors.placeHolder,
                           fontFamily: AppTextStyle.poppinsRegular,
                           fontSize: 16.0,
                         ),
-                        children: [
-                          TextSpan(
-                            text: "Terms of Use",
-                            style: const TextStyle(
-                              color: AppColors.primary,
-                              fontFamily: AppTextStyle.poppinsRegular,
-                              fontSize: 16.0,
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                print("Terms of Use");
-                              },
-                          ),
-                          const TextSpan(
-                            text: " & ",
-                            style: TextStyle(
-                              color: AppColors.placeHolder,
-                              fontFamily: AppTextStyle.poppinsRegular,
-                              fontSize: 16.0,
-                            ),
-                          ),
-                          TextSpan(
-                            text: "Privacy Policy",
-                            style: const TextStyle(
-                              color: AppColors.primary,
-                              fontFamily: AppTextStyle.poppinsRegular,
-                              fontSize: 16.0,
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                print("Privacy Policy");
-                              },
-                          ),
-                        ]),
+                      ),
+                      TextSpan(
+                        text: "Privacy Policy",
+                        style: const TextStyle(
+                          color: AppColors.primary,
+                          fontFamily: AppTextStyle.poppinsRegular,
+                          fontSize: 16.0,
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            print("Privacy Policy");
+                          },
+                      ),
+                    ],
                   ),
-                ],
+                ),
+                onPressed: (value) {
+                  isAccepted = value;
+                },
               ),
               const SizedBox(height: 72.0),
               CommonButton(
@@ -141,7 +132,7 @@ class SignUpPage extends StatelessWidget {
                   ],
                 ),
               ),
-               const SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
             ],
           ),
         ),

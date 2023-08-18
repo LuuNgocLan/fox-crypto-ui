@@ -41,7 +41,7 @@ class _CommonEditText extends State<CommonEditText> {
               color: AppColors.secondary,
               borderRadius: BorderRadius.circular(12.0)),
           child: TextFormField(
-            obscureText: isHidePassword,
+            obscureText: widget.isPassword ? isHidePassword : false,
             style: const TextStyle(
               fontFamily: AppTextStyle.poppinsRegular,
               fontSize: 18.0,
