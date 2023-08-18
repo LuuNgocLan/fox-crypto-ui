@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 
 class GetStartedPage extends StatelessWidget {
@@ -42,13 +43,17 @@ class GetStartedPage extends StatelessWidget {
                 CommonButton(
                   label: "Sign up",
                   isStrokeButton: true,
-                  onAction: () {},
+                  onAction: () {
+                    Navigator.pushNamed(context, Routes.signup);
+                  },
                   width: MediaQuery.of(context).size.width / 2 - 36.0,
                 ),
                 const SizedBox(width: 24.0),
                 CommonButton(
                   label: "Log in",
-                  onAction: () {},
+                  onAction: () {
+                    Navigator.pushNamed(context, Routes.login);
+                  },
                   width: MediaQuery.of(context).size.width / 2 - 36.0,
                 ),
                 const SizedBox(width: 24),

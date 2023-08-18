@@ -28,7 +28,6 @@ class OnboardingPage extends StatelessWidget {
     return SafeArea(
       top: false,
       child: Scaffold(
-        backgroundColor: AppColors.background,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.end,

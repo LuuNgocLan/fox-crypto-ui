@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
-import 'package:fox_crypto_ui/screens/onboarding/onboarding_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: Routes.login,
+      initialRoute: Routes.onboarding,
       routes: Routes.routes,
     );
   }
