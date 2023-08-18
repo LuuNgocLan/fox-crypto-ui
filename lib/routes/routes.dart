@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/screens/get_started/get_started_page.dart';
+import 'package:fox_crypto_ui/screens/login/login_page.dart';
 import 'package:fox_crypto_ui/screens/onboarding/onboarding_page.dart';
 
 //Note:  Warning: When using initialRoute, don’t define a home property on MaterialApp
@@ -14,5 +15,6 @@ class Routes {
   static final routes = <String, WidgetBuilder>{
     onboarding: (BuildContext context) => const OnboardingPage(),
     started: (BuildContext  context) => const GetStartedPage(),
+    login: (BuildContext  context) => const LoginPage(),
   };
 }

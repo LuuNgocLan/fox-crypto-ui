@@ -12,14 +12,14 @@ class CommonButton extends StatelessWidget {
     this.isStrokeButton = false,
     required this.onAction,
     required this.label,
-    required this.width,
+    this.width = double.infinity,
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width,
+      width: double.infinity,
       height: 52.0,
       child: isStrokeButton
           ? OutlinedButton(

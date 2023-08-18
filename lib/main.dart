@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: Routes.onboarding,
+      initialRoute: Routes.login,
       routes: Routes.routes,
     );
   }
