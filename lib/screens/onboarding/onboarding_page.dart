@@ -33,14 +33,19 @@ class OnboardingPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             const SizedBox(height: 36),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 24),
-              child: Text(
-                "Skip",
-                style: TextStyle(
-                    fontSize: 20,
-                    fontFamily: AppTextStyle.poppinsRegular,
-                    color: AppColors.primary),
+            GestureDetector(
+              onTap: () {
+                Navigator.popAndPushNamed(context, Routes.started);
+              },
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                  "Skip",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontFamily: AppTextStyle.poppinsRegular,
+                      color: AppColors.primary),
+                ),
               ),
             ),
             const SizedBox(height: 40),
@@ -72,7 +77,7 @@ class OnboardingPage extends StatelessWidget {
                 InkWell(
                   customBorder: const CircleBorder(),
                   onTap: () {
-                    Navigator.pushNamed(context, Routes.started);
+                    Navigator.popAndPushNamed(context, Routes.started);
                   },
                   child: Container(
                     decoration: const BoxDecoration(
