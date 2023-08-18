@@ -1,6 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 import 'package:fox_crypto_ui/shared_view/common_edit_text.dart';
@@ -48,7 +50,38 @@ class LoginPage extends StatelessWidget {
               CommonButton(
                 onAction: () {},
                 label: "Log in",
-              )
+              ),
+              const Spacer(),
+              Center(
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  selectionColor: AppColors.primary,
+                  text: TextSpan(
+                    text: "New to Foxcrypto?",
+                    style: const TextStyle(
+                      color: AppColors.placeHolder,
+                      fontFamily: AppTextStyle.poppinsRegular,
+                      fontSize: 16.0,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: " Create an account",
+                        style: const TextStyle(
+                          color: AppColors.primary,
+                          fontFamily: AppTextStyle.poppinsMedium,
+                          fontSize: 16.0,
+                        ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            print("Sign in!");
+                            Navigator.popAndPushNamed(context, Routes.signup);
+                          },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16.0),
             ],
           ),
         ),
