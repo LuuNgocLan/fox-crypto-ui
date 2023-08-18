@@ -20,8 +20,7 @@ This is a very simple app created for beginners.
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/d5eb53ff-cab2-414c-acb8-8c85e8e1bcb9" width="200"/>
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/28c9d70b-bc56-4e7c-b85d-1b8a758e4245" width="200"/>
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/770972dd-f842-49d2-b8ad-1ccb34ebfa37" width="200"/>
-
-
+<img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/fb6ace47-57d0-46be-9654-dddae6952dea" width="200"/>
 
 			
 			
