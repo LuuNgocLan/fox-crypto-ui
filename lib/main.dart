@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: Routes.onboarding,
+      initialRoute: Routes.home,
       routes: Routes.routes,
     );
   }

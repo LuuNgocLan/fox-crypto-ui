@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/data/models/coin.dart';
+import 'package:fox_crypto_ui/screens/home/widgets/trend_paint.dart';
 
 class CoinItem extends StatelessWidget {
   final Coin coin;
@@ -57,6 +58,13 @@ class CoinItem extends StatelessWidget {
                 fontFamily: AppTextStyle.poppinsRegular,
                 fontSize: 13.0,
                 color: Color(0xff00C566)),
+          ),
+          const SizedBox(height: 20.0),
+          Expanded(
+            child: CustomPaint(
+              painter:
+                  TrendPainter(coin.trend.entries.map((e) => e.value).toList()),
+            ),
           ),
         ],
       ),

@@ -16,27 +16,30 @@ class CardStack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double maxWidth = MediaQuery.of(context).size.width - 48;
+    double height = 200.0;
     return Stack(
       alignment: Alignment.bottomCenter,
       children: [
         Container(
-          height: (maxWidth - 100.0) / 264 * 232,
-          width: maxWidth - 100.0,
+          height: (maxWidth - 96.0) / 267 * height,
+          width: maxWidth - 96.0,
+          margin: const EdgeInsets.only(bottom: 30.0),
           decoration: BoxDecoration(
             color: const Color(0xfffff9f81),
             borderRadius: BorderRadius.circular(22),
           ),
         ),
         Container(
-          height: (maxWidth - 48.0) / 312 * 218,
+          height: (maxWidth - 48.0) / 312 * height,
           width: maxWidth - 48.0,
+          margin: const EdgeInsets.only(bottom: 18.0),
           decoration: BoxDecoration(
             color: const Color(0xffFFD676),
             borderRadius: BorderRadius.circular(22),
           ),
         ),
         Container(
-          height: maxWidth / 364 * 200,
+          height: maxWidth / 364 * height,
           width: maxWidth,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(22),

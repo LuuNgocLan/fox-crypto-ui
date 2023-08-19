@@ -32,6 +32,7 @@ class HomePage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
+              const SizedBox(height: 24.0),
               const Center(
                 child: CardStack(
                   todayProfit: 1816.0,
@@ -57,7 +58,7 @@ class HomePage extends StatelessWidget {
               ),
               const SizedBox(height: 36.0),
               titleOfContent("News"),
-              const SizedBox(height: 24.0),
+              const SizedBox(height: 12.0),
               ...DataSource.newsData.map((e) => NewsItem(news: e)).toList(),
               const SizedBox(height: 72.0),
             ],

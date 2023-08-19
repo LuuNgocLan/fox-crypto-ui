@@ -13,7 +13,7 @@ class NewsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 24.0),
+      margin: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
       height: 133.0,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -48,22 +48,24 @@ class NewsItem extends StatelessWidget {
                         color: Colors.white),
                   ),
                   const SizedBox(height: 8.0),
-                  RichText(
-                    text: TextSpan(
-                      text: news.author,
-                      style: const TextStyle(
-                          fontFamily: AppTextStyle.poppinsRegular,
-                          fontSize: 13.0,
-                          color: AppColors.primary),
-                      children: [
-                        TextSpan(
-                          text: " • ${news.time}",
-                          style: const TextStyle(
-                              fontFamily: AppTextStyle.poppinsRegular,
-                              fontSize: 13.0,
-                              color: AppColors.placeHolder),
-                        ),
-                      ],
+                  Expanded(
+                    child: RichText(
+                      text: TextSpan(
+                        text: news.author,
+                        style: const TextStyle(
+                            fontFamily: AppTextStyle.poppinsRegular,
+                            fontSize: 13.0,
+                            color: AppColors.primary),
+                        children: [
+                          TextSpan(
+                            text: " • ${news.time}",
+                            style: const TextStyle(
+                                fontFamily: AppTextStyle.poppinsRegular,
+                                fontSize: 13.0,
+                                color: AppColors.placeHolder),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
