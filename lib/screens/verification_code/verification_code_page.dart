@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
-import 'package:fox_crypto_ui/screens/verification_code/input_code.dart';
+import 'package:fox_crypto_ui/routes/routes.dart';
+import 'package:fox_crypto_ui/screens/verification_code/widgets/input_code.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 
@@ -75,7 +76,11 @@ class VerificationCodePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 100.0),
-              CommonButton(onAction: () {}, label: "Verify"),
+              CommonButton(
+                  onAction: () {
+                    Navigator.popAndPushNamed(context, Routes.home);
+                  },
+                  label: "Verify"),
             ],
           ),
         ),

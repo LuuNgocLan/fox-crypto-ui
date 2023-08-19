@@ -9,4 +9,5 @@ class AppColors {
   static const placeHolder = Color(0xFFA7AEBF);
   static const textColor = Color(0xFFF8F8F8);
   static const hintTextColor = Color(0xFF494D58);
+  static const textGray = Color(0xFF494D58);
 }

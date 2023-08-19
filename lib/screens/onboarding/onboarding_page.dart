@@ -4,8 +4,8 @@ import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
-import 'package:fox_crypto_ui/screens/onboarding/onboading.dart';
-import 'package:fox_crypto_ui/screens/onboarding/slide_item.dart';
+import 'package:fox_crypto_ui/data/models/onboading.dart';
+import 'package:fox_crypto_ui/screens/onboarding/widgets/slide_item.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingPage extends StatelessWidget {
