@@ -3,6 +3,7 @@ import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/screens/verification_code/widgets/input_code.dart';
+import 'package:fox_crypto_ui/screens/verification_code/widgets/timer_view.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 
@@ -11,6 +12,9 @@ class VerificationCodePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ValueNotifier<bool> isStartCountdownTime = ValueNotifier<bool>(true);
+    bool canResendCode = false;
+    String verifyCode = "";
     return SafeArea(
       top: false,
       child: Scaffold(
@@ -49,20 +53,26 @@ class VerificationCodePage extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 32.0),
-              const Center(
-                child: Text(
-                  "00:30",
-                  style: TextStyle(
-                    fontFamily: AppTextStyle.poppinsMedium,
-                    color: AppColors.placeHolder,
-                    fontSize: 16.0,
-                  ),
+              Center(
+                child: ValueListenableBuilder<bool>(
+                  builder: (BuildContext context, bool value, Widget? child) {
+                    return TimerView(
+                      onCompleted: () {
+                        canResendCode = true;
+                      },
+                      startCountdown: value,
+                    );
+                  },
+                  valueListenable: isStartCountdownTime,
                 ),
               ),
               const SizedBox(height: 8.0),
               GestureDetector(
                 onTap: () {
-                  print("resend code");
+                  if (canResendCode) {
+                    isStartCountdownTime.value = true;
+                    print("resend code");
+                  }
                 },
                 child: const Center(
                   child: Text(
