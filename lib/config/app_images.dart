@@ -14,4 +14,5 @@ class AppImages {
   static const icEtherium = '$path/ic_etherium.svg';
   static const img1 = '$path/img_1.jpg';
   static const icGrowth = '$path/ic_growth.svg';
+  static const imgCompleted = '$path/img_completed.png';
 }

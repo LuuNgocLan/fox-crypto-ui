@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: Routes.verificationCode,
+      initialRoute: Routes.completed,
       routes: Routes.routes,
     );
   }
