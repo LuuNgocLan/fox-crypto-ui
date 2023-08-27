@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 
 class CompletedScreen extends StatelessWidget {
@@ -17,18 +18,18 @@ class CompletedScreen extends StatelessWidget {
             const Spacer(),
             Image.asset(AppImages.imgCompleted),
             const SizedBox(height: 16.0),
-            const Text(
-              "You’re verified",
-              style: TextStyle(
+            Text(
+              S.current.completed_title,
+              style: const TextStyle(
                 fontFamily: AppTextStyle.poppinsSemiBold,
                 fontSize: 26,
                 color: Colors.white,
               ),
             ),
             const SizedBox(height: 8.0),
-            const Text(
-              "You have been verified your information completely. Let’s make transactions!",
-              style: TextStyle(
+            Text(
+              S.current.completed_msg,
+              style: const TextStyle(
                 fontFamily: AppTextStyle.poppinsRegular,
                 fontSize: 16,
                 color: Colors.white,
@@ -38,7 +39,8 @@ class CompletedScreen extends StatelessWidget {
             const SizedBox(height: 54),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: CommonButton(onAction: () {}, label: "Back to Home"),
+              child:
+                  CommonButton(onAction: () {}, label: S.current.back_to_home),
             ),
             const Spacer(),
           ],
