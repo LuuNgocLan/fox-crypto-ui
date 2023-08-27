@@ -109,6 +109,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Top Coins`
+  String get top_coins {
+    return Intl.message(
+      'Top Coins',
+      name: 'top_coins',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `News`
+  String get news {
+    return Intl.message(
+      'News',
+      name: 'news',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See All`
+  String get see_all {
+    return Intl.message(
+      'See All',
+      name: 'see_all',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Total Balance`
+  String get total_balance {
+    return Intl.message(
+      'Total Balance',
+      name: 'total_balance',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Today’s Profit`
+  String get today_profit {
+    return Intl.message(
+      'Today’s Profit',
+      name: 'today_profit',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

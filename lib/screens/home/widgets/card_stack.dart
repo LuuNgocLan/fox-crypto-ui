@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/generated/l10n.dart';
 
 class CardStack extends StatelessWidget {
   final double totalBalance;
@@ -65,9 +66,9 @@ class CardStack extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            "Total Balance",
-            style: TextStyle(
+          Text(
+            S.current.total_balance,
+            style: const TextStyle(
                 fontFamily: AppTextStyle.poppinsRegular,
                 fontSize: 16.0,
                 color: AppColors.textGray),
@@ -93,9 +94,9 @@ class CardStack extends StatelessWidget {
                     color: AppColors.background),
               ),
               const SizedBox(width: 8.0),
-              const Text(
-                "Today’s Profit",
-                style: TextStyle(
+              Text(
+                S.current.today_profit,
+                style: const TextStyle(
                     fontFamily: AppTextStyle.poppinsRegular,
                     fontSize: 13.0,
                     color: AppColors.textGray),

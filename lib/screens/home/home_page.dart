@@ -4,6 +4,7 @@ import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/data/data_source.dart';
+import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/screens/home/widgets/card_stack.dart';
 import 'package:fox_crypto_ui/screens/home/widgets/coin_item.dart';
 import 'package:fox_crypto_ui/screens/home/widgets/new_item.dart';
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 36.0),
-              titleOfContent("Top Coins"),
+              titleOfContent(S.current.top_coins),
               const SizedBox(height: 24.0),
               SizedBox(
                 height: 209.0,
@@ -57,7 +58,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 36.0),
-              titleOfContent("News"),
+              titleOfContent(S.current.news),
               const SizedBox(height: 12.0),
               ...DataSource.newsData.map((e) => NewsItem(news: e)).toList(),
               const SizedBox(height: 72.0),
@@ -83,9 +84,9 @@ class HomePage extends StatelessWidget {
               color: Colors.white),
         ),
         const Spacer(),
-        const Text(
-          "See All",
-          style: TextStyle(
+        Text(
+          S.current.see_all,
+          style: const TextStyle(
               fontFamily: AppTextStyle.poppinsRegular,
               fontSize: 13.0,
               color: AppColors.primary),

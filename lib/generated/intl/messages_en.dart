@@ -30,6 +30,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "get_started_title":
             MessageLookupByLibrary.simpleMessage("Fast and Flexible \nTrading"),
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
-        "sign_up": MessageLookupByLibrary.simpleMessage("Sign up")
+        "news": MessageLookupByLibrary.simpleMessage("News"),
+        "see_all": MessageLookupByLibrary.simpleMessage("See All"),
+        "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "today_profit": MessageLookupByLibrary.simpleMessage("Today’s Profit"),
+        "top_coins": MessageLookupByLibrary.simpleMessage("Top Coins"),
+        "total_balance": MessageLookupByLibrary.simpleMessage("Total Balance")
       };
 }
