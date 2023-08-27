@@ -1,5 +1,8 @@
 {
     "completed_title": "You’re verified",
     "completed_msg": "You have been verified your information completely. Let’s make transactions!",
-    "back_to_home": "Back to Home"
+    "back_to_home": "Back to Home",
+    "sign_up": "Sign up",
+    "login": "Log in",
+    "get_started_title": "Fast and Flexible \nTrading"
 }

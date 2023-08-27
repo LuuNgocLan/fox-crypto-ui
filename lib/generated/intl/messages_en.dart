@@ -26,6 +26,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "completed_msg": MessageLookupByLibrary.simpleMessage(
             "You have been verified your information completely. Let’s make transactions!"),
         "completed_title":
-            MessageLookupByLibrary.simpleMessage("You’re verified")
+            MessageLookupByLibrary.simpleMessage("You’re verified"),
+        "get_started_title":
+            MessageLookupByLibrary.simpleMessage("Fast and Flexible \nTrading"),
+        "login": MessageLookupByLibrary.simpleMessage("Log in"),
+        "sign_up": MessageLookupByLibrary.simpleMessage("Sign up")
       };
 }

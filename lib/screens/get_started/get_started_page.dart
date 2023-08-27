@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 
@@ -24,12 +25,12 @@ class GetStartedPage extends StatelessWidget {
               fit: BoxFit.contain,
             ),
             const Spacer(),
-            const Padding(
-              padding: EdgeInsets.only(
+            Padding(
+              padding: const EdgeInsets.only(
                   left: 24.0, top: 30.0, right: 24.0, bottom: 76.0),
               child: Text(
-                "Fast and Flexible \nTrading",
-                style: TextStyle(
+                S.current.get_started_title,
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 36,
                     fontFamily: AppTextStyle.poppinsSemiBold),
@@ -41,7 +42,7 @@ class GetStartedPage extends StatelessWidget {
               children: [
                 const SizedBox(width: 24),
                 CommonButton(
-                  label: "Sign up",
+                  label: S.current.sign_up,
                   isStrokeButton: true,
                   onAction: () {
                     Navigator.pushNamed(context, Routes.signup);
@@ -50,7 +51,7 @@ class GetStartedPage extends StatelessWidget {
                 ),
                 const SizedBox(width: 24.0),
                 CommonButton(
-                  label: "Log in",
+                  label: S.current.login,
                   onAction: () {
                     Navigator.pushNamed(context, Routes.login);
                   },
