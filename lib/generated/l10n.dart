@@ -159,6 +159,176 @@ class S {
       args: [],
     );
   }
+
+  /// `Email Address`
+  String get email_address {
+    return Intl.message(
+      'Email Address',
+      name: 'email_address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your email address`
+  String get email_hint {
+    return Intl.message(
+      'Enter your email address',
+      name: 'email_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your password`
+  String get password_hint {
+    return Intl.message(
+      'Enter your password',
+      name: 'password_hint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Forgot password?`
+  String get forgot_password {
+    return Intl.message(
+      'Forgot password?',
+      name: 'forgot_password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New to Foxcrypto?`
+  String get new_to_foxcrypto {
+    return Intl.message(
+      'New to Foxcrypto?',
+      name: 'new_to_foxcrypto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` Create an account`
+  String get create_new_account {
+    return Intl.message(
+      ' Create an account',
+      name: 'create_new_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 8 characters with uppercase letters and numbers`
+  String get password_rule {
+    return Intl.message(
+      'At least 8 characters with uppercase letters and numbers',
+      name: 'password_rule',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accept`
+  String get accept {
+    return Intl.message(
+      'Accept',
+      name: 'accept',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Terms of Use`
+  String get tearm_of_use {
+    return Intl.message(
+      'Terms of Use',
+      name: 'tearm_of_use',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Privacy Policy`
+  String get privacy_policy {
+    return Intl.message(
+      'Privacy Policy',
+      name: 'privacy_policy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account?`
+  String get already_have_an_account {
+    return Intl.message(
+      'Already have an account?',
+      name: 'already_have_an_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome To \nFox`
+  String get welcome_to_fox {
+    return Intl.message(
+      'Welcome To \nFox',
+      name: 'welcome_to_fox',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `crypto`
+  String get crypto {
+    return Intl.message(
+      'crypto',
+      name: 'crypto',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Transaction \nSecurity `
+  String get transaction_security {
+    return Intl.message(
+      'Transaction \nSecurity ',
+      name: 'transaction_security',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fast and reliable \nMarket updated`
+  String get fast_and_reliable_market_update {
+    return Intl.message(
+      'Fast and reliable \nMarket updated',
+      name: 'fast_and_reliable_market_update',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Skip`
+  String get skip {
+    return Intl.message(
+      'Skip',
+      name: 'skip',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

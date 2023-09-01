@@ -9,5 +9,22 @@
     "news": "News",
     "see_all": "See All",
     "total_balance": "Total Balance",
-    "today_profit": "Today’s Profit"
+    "today_profit": "Today’s Profit",
+    "email_address": "Email Address",
+    "email_hint": "Enter your email address",
+    "password": "Password",
+    "password_hint": "Enter your password",
+    "forgot_password": "Forgot password?",
+    "new_to_foxcrypto": "New to Foxcrypto?",
+    "create_new_account": " Create an account",
+    "password_rule": "At least 8 characters with uppercase letters and numbers",
+    "accept": "Accept",
+    "tearm_of_use": "Terms of Use",
+    "privacy_policy": "Privacy Policy",
+    "already_have_an_account": "Already have an account?",
+    "welcome_to_fox": "Welcome To \nFox",
+    "crypto": "crypto",
+    "transaction_security": "Transaction \nSecurity ",
+    "fast_and_reliable_market_update": "Fast and reliable \nMarket updated",
+    "skip": "Skip"
 }

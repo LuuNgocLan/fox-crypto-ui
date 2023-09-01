@@ -3,8 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
-import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/data/models/onboading.dart';
+import 'package:fox_crypto_ui/generated/l10n.dart';
+import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/screens/onboarding/widgets/slide_item.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -16,13 +17,14 @@ class OnboardingPage extends StatelessWidget {
     final PageController pageController = PageController();
     final List<Onboarding> data = [
       Onboarding(
-          normalText: "Welcome To \nFox",
-          coloredText: "crypto",
+          normalText: S.current.welcome_to_fox,
+          coloredText: S.current.crypto,
           image: AppImages.imgOnboard1),
       Onboarding(
-          normalText: "Transaction \nSecurity ", image: AppImages.imgOnboard2),
+          normalText: S.current.transaction_security,
+          image: AppImages.imgOnboard2),
       Onboarding(
-          normalText: "Fast and reliable \nMarket updated",
+          normalText: S.current.fast_and_reliable_market_update,
           image: AppImages.imgOnboard3),
     ];
     return SafeArea(
@@ -37,11 +39,11 @@ class OnboardingPage extends StatelessWidget {
               onTap: () {
                 Navigator.popAndPushNamed(context, Routes.started);
               },
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
-                  "Skip",
-                  style: TextStyle(
+                  S.current.skip,
+                  style: const TextStyle(
                       fontSize: 20,
                       fontFamily: AppTextStyle.poppinsRegular,
                       color: AppColors.primary),

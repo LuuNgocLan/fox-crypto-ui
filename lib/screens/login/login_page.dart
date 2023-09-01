@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
@@ -19,7 +20,7 @@ class LoginPage extends StatelessWidget {
           onBack: () {
             Navigator.pop(context);
           },
-          title: "Log in",
+          title: S.current.login,
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -27,20 +28,20 @@ class LoginPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 24.0),
-              const CommonEditText(
-                label: "Email Address",
-                hintText: "Enter your email address",
+              CommonEditText(
+                label: S.current.email_address,
+                hintText: S.current.email_hint,
               ),
               const SizedBox(height: 24.0),
-              const CommonEditText(
-                label: "Password",
-                hintText: "Enter your password",
+              CommonEditText(
+                label: S.current.password,
+                hintText: S.current.password_hint,
                 isPassword: true,
               ),
               const SizedBox(height: 12.0),
-              const Text(
-                "Forgot password?",
-                style: TextStyle(
+              Text(
+                S.current.forgot_password,
+                style: const TextStyle(
                   color: AppColors.primary,
                   fontFamily: AppTextStyle.poppinsRegular,
                   fontSize: 16.0,
@@ -51,7 +52,7 @@ class LoginPage extends StatelessWidget {
                 onAction: () {
                   Navigator.pushNamed(context, Routes.verificationCode);
                 },
-                label: "Log in",
+                label: S.current.login,
               ),
               const Spacer(),
               Center(
@@ -59,7 +60,7 @@ class LoginPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   selectionColor: AppColors.primary,
                   text: TextSpan(
-                    text: "New to Foxcrypto?",
+                    text: S.current.new_to_foxcrypto,
                     style: const TextStyle(
                       color: AppColors.placeHolder,
                       fontFamily: AppTextStyle.poppinsRegular,
@@ -67,7 +68,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     children: [
                       TextSpan(
-                        text: " Create an account",
+                        text: S.current.create_new_account,
                         style: const TextStyle(
                           color: AppColors.primary,
                           fontFamily: AppTextStyle.poppinsMedium,
@@ -75,7 +76,6 @@ class LoginPage extends StatelessWidget {
                         ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
-                            print("Sign in!");
                             Navigator.popAndPushNamed(context, Routes.signup);
                           },
                       ),
