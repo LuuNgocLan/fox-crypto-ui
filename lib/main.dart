@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      initialRoute: Routes.onboarding,
+      initialRoute: Routes.accountVerifyStep1,
       routes: Routes.routes,
     );
   }

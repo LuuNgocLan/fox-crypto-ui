@@ -26,5 +26,18 @@
     "crypto": "crypto",
     "transaction_security": "Transaction \nSecurity ",
     "fast_and_reliable_market_update": "Fast and reliable \nMarket updated",
-    "skip": "Skip"
+    "skip": "Skip",
+    "verification": "Verification",
+    "code_have_been_sent_to_email": "Code have been sent to your email",
+    "resend_code": "Resend Code",
+    "verify": "Verify",
+    "verify_account": "Verify account",
+    "select_country_of_resident": "Select Country of Resident",
+    "select_country": "Select country",
+    "select_valid_government": "Select a valid Government-issued document",
+    "identify_card": "Identify Card",
+    "passport": "Passport",
+    "driver_license": "Driver’s License",
+    "verify_account_checkbox": "This information is used for identity verification only, and will be kept secure by CrypCoin",
+    "continue_action": "Continue"
 }

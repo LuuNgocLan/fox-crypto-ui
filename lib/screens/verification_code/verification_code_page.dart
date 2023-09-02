@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/screens/verification_code/widgets/input_code.dart';
 import 'package:fox_crypto_ui/screens/verification_code/widgets/timer_view.dart';
@@ -19,7 +20,7 @@ class VerificationCodePage extends StatelessWidget {
       top: false,
       child: Scaffold(
         appBar: CommonAppBar(
-          title: "Verification",
+          title: S.current.verification,
           onBack: () {
             Navigator.pop(context);
           },
@@ -30,9 +31,9 @@ class VerificationCodePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 24.0),
-              const Text(
-                "Code have been sent to your email",
-                style: TextStyle(
+              Text(
+                S.current.code_have_been_sent_to_email,
+                style: const TextStyle(
                   fontFamily: AppTextStyle.poppinsRegular,
                   color: AppColors.placeHolder,
                   fontSize: 16.0,
@@ -74,10 +75,10 @@ class VerificationCodePage extends StatelessWidget {
                     print("resend code");
                   }
                 },
-                child: const Center(
+                child: Center(
                   child: Text(
-                    "Resend Code",
-                    style: TextStyle(
+                    S.current.resend_code,
+                    style: const TextStyle(
                       fontFamily: AppTextStyle.poppinsSemiBold,
                       color: AppColors.primary,
                       fontSize: 18.0,
@@ -90,7 +91,7 @@ class VerificationCodePage extends StatelessWidget {
                   onAction: () {
                     Navigator.popAndPushNamed(context, Routes.home);
                   },
-                  label: "Verify"),
+                  label: S.current.verify),
             ],
           ),
         ),

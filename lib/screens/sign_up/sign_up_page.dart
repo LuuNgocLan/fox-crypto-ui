@@ -43,7 +43,7 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(height: 4.0),
               Text(
                 S.current.password_rule,
-                style: TextStyle(
+                style: const TextStyle(
                   color: AppColors.placeHolder,
                   fontFamily: AppTextStyle.poppinsRegular,
                   fontSize: 13.0,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fox_crypto_ui/screens/account_verification/account_verification_page.dart';
 import 'package:fox_crypto_ui/screens/account_verification/completed_screen.dart';
 import 'package:fox_crypto_ui/screens/get_started/get_started_page.dart';
 import 'package:fox_crypto_ui/screens/home/home_page.dart';
@@ -28,7 +29,8 @@ class Routes {
     login: (BuildContext context) => const LoginPage(),
     signup: (BuildContext context) => const SignUpPage(),
     verificationCode: (BuildContext context) => const VerificationCodePage(),
-    accountVerifyStep1: (BuildContext context) => const SignUpPage(),
+    accountVerifyStep1: (BuildContext context) =>
+        const AccountVerificationPage(),
     accountVerifyStep2: (BuildContext context) => const SignUpPage(),
     accountVerifyStep3: (BuildContext context) => const SignUpPage(),
     completed: (BuildContext context) => const CompletedScreen(),

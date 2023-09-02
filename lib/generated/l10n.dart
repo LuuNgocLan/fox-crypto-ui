@@ -329,6 +329,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Verification`
+  String get verification {
+    return Intl.message(
+      'Verification',
+      name: 'verification',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Code have been sent to your email`
+  String get code_have_been_sent_to_email {
+    return Intl.message(
+      'Code have been sent to your email',
+      name: 'code_have_been_sent_to_email',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend Code`
+  String get resend_code {
+    return Intl.message(
+      'Resend Code',
+      name: 'resend_code',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify`
+  String get verify {
+    return Intl.message(
+      'Verify',
+      name: 'verify',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Verify account`
+  String get verify_account {
+    return Intl.message(
+      'Verify account',
+      name: 'verify_account',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select Country of Resident`
+  String get select_country_of_resident {
+    return Intl.message(
+      'Select Country of Resident',
+      name: 'select_country_of_resident',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select country`
+  String get select_country {
+    return Intl.message(
+      'Select country',
+      name: 'select_country',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select a valid Government-issued document`
+  String get select_valid_government {
+    return Intl.message(
+      'Select a valid Government-issued document',
+      name: 'select_valid_government',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Identify Card`
+  String get identify_card {
+    return Intl.message(
+      'Identify Card',
+      name: 'identify_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Passport`
+  String get passport {
+    return Intl.message(
+      'Passport',
+      name: 'passport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Driver’s License`
+  String get driver_license {
+    return Intl.message(
+      'Driver’s License',
+      name: 'driver_license',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This information is used for identity verification only, and will be kept secure by CrypCoin`
+  String get verify_account_checkbox {
+    return Intl.message(
+      'This information is used for identity verification only, and will be kept secure by CrypCoin',
+      name: 'verify_account_checkbox',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continue_action {
+    return Intl.message(
+      'Continue',
+      name: 'continue_action',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

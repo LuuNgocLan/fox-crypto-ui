@@ -35,7 +35,7 @@ class _CommonCheckbox extends State<CommonCheckbox> {
           ),
         ),
         const SizedBox(width: 8.0),
-        widget.content,
+        Expanded(child: widget.content),
       ],
     );
   }

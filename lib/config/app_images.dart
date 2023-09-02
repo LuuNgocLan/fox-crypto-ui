@@ -15,4 +15,7 @@ class AppImages {
   static const img1 = '$path/img_1.jpg';
   static const icGrowth = '$path/ic_growth.svg';
   static const imgCompleted = '$path/img_completed.png';
+  static const icIdentityCard = '$path/ic_identity_card.svg';
+  static const icPassport = '$path/ic_passport.svg';
+  static const icDrivenLicense = '$path/ic_driven_license.svg';
 }
