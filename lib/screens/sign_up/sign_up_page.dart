@@ -102,7 +102,9 @@ class SignUpPage extends StatelessWidget {
               ),
               const SizedBox(height: 72.0),
               CommonButton(
-                onAction: () {},
+                onAction: () {
+                  Navigator.popAndPushNamed(context, Routes.accountVerifyStep1);
+                },
                 label: S.current.sign_up,
               ),
               const Spacer(),
