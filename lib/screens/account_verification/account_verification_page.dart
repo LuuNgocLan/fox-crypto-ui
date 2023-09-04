@@ -1,9 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/data/data_source.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/screens/account_verification/widgets/document_option.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
@@ -22,22 +20,15 @@ class AccountVerificationPage extends StatefulWidget {
 class _AccountVerificationPage extends State<AccountVerificationPage> {
   List<String> countries = [];
   @override
-  Future<void> initState() async {
+  void initState() {
     super.initState();
-    final String response =
-        await rootBundle.loadString('assets/country_data.json');
-    await json.decode(response).then(
-      (data) {
-        for (var element in data) {
-          countries.add(element["countryName"]);
-        }
-      },
-    );
+    countries = DataSource.countriesData();
+    print("List");
   }
 
   @override
   Widget build(BuildContext context) {
-    setState(() {});
+    String? countrySelected;
     return SafeArea(
       child: Scaffold(
         appBar: CommonAppBar(
@@ -61,43 +52,7 @@ class _AccountVerificationPage extends State<AccountVerificationPage> {
                     color: Colors.white),
               ),
               const SizedBox(height: 22.0),
-              Container(
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 2.0, color: AppColors.hintTextColor),
-                    borderRadius: BorderRadius.circular(13.0),
-                    shape: BoxShape.rectangle),
-                child: DropdownButton(
-                  underline: const SizedBox(),
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16.0, vertical: 8.0),
-                  items: countries.map<DropdownMenuItem<String>>(
-                    (String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          value,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontFamily: AppTextStyle.poppinsRegular,
-                            fontSize: 17.0,
-                          ),
-                        ),
-                      );
-                    },
-                  ).toList(),
-                  onChanged: (value) {},
-                  hint: Text(
-                    S.current.select_country,
-                    style: const TextStyle(
-                      color: AppColors.hintTextColor,
-                      fontFamily: AppTextStyle.poppinsRegular,
-                      fontSize: 17.0,
-                    ),
-                  ),
-                  isExpanded: true,
-                ),
-              ),
+              _buildDropdown(countrySelected),
               const SizedBox(height: 36.0),
               Text(
                 S.current.select_valid_government,
@@ -129,6 +84,55 @@ class _AccountVerificationPage extends State<AccountVerificationPage> {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildDropdown(String? countrySelected) {
+    return Container(
+      decoration: BoxDecoration(
+          border: Border.all(width: 2.0, color: AppColors.hintTextColor),
+          borderRadius: BorderRadius.circular(13.0),
+          shape: BoxShape.rectangle),
+      child: DropdownButton(
+        value: countrySelected,
+        dropdownColor: AppColors.textGray.withOpacity(0.95),
+        borderRadius: BorderRadius.circular(13.0),
+        menuMaxHeight: 350.0,
+        underline: const SizedBox(),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+        items: countries.map<DropdownMenuItem<String>>(
+          (String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(
+                value,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontFamily: AppTextStyle.poppinsRegular,
+                  fontSize: 17.0,
+                ),
+              ),
+            );
+          },
+        ).toList(),
+        onTap: () {
+          setState(() {});
+        },
+        onChanged: (value) {
+          setState(() {
+            countrySelected = value;
+          });
+        },
+        hint: Text(
+          S.current.select_country,
+          style: const TextStyle(
+            color: AppColors.hintTextColor,
+            fontFamily: AppTextStyle.poppinsRegular,
+            fontSize: 17.0,
+          ),
+        ),
+        isExpanded: true,
       ),
     );
   }
