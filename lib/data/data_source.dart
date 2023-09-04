@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/data/models/coin.dart';
 import 'package:fox_crypto_ui/data/models/news.dart';
@@ -25,4 +28,23 @@ class DataSource {
         "Finbold",
         "47min ago"),
   ];
+
+  static Future<List<dynamic>> readCountryJson() async {
+    final String response =
+        await rootBundle.loadString('assets/country_data.json');
+    final data = await json.decode(response);
+    return data;
+  }
+
+  static List<String> countriesData() {
+    List<String> countries = [];
+    readCountryJson().then(
+      (data) {
+        for (var element in data) {
+          countries.add(element["countryName"]);
+        }
+      },
+    );
+    return countries;
+  }
 }

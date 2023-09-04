@@ -71,6 +71,7 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+    - assets/country_data.json
   
 
   # An image asset can refer to one or more resolution-specific "variants", see

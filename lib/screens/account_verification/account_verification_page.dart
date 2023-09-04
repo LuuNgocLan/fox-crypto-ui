@@ -1,35 +1,43 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
-import 'package:fox_crypto_ui/screens/account_verification/widgets/document_item.dart';
+import 'package:fox_crypto_ui/screens/account_verification/widgets/document_option.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 import 'package:fox_crypto_ui/shared_view/common_checkbox.dart';
 
-class AccountVerificationPage extends StatelessWidget {
+class AccountVerificationPage extends StatefulWidget {
   const AccountVerificationPage({super.key});
 
   @override
+  State<StatefulWidget> createState() {
+    return _AccountVerificationPage();
+  }
+}
+
+class _AccountVerificationPage extends State<AccountVerificationPage> {
+  List<String> countries = [];
+  @override
+  Future<void> initState() async {
+    super.initState();
+    final String response =
+        await rootBundle.loadString('assets/country_data.json');
+    await json.decode(response).then(
+      (data) {
+        for (var element in data) {
+          countries.add(element["countryName"]);
+        }
+      },
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    const List<String> list = <String>[
-      'One',
-      'Two',
-      'Three',
-      'Four',
-      'One',
-      'Two',
-      'Three',
-      'Four',
-      'One',
-      'Two',
-      'Three',
-      'Four',
-      'One',
-      'Two',
-      'Three',
-      'Four'
-    ];
+    setState(() {});
     return SafeArea(
       child: Scaffold(
         appBar: CommonAppBar(
@@ -63,16 +71,17 @@ class AccountVerificationPage extends StatelessWidget {
                   underline: const SizedBox(),
                   padding: const EdgeInsets.symmetric(
                       horizontal: 16.0, vertical: 8.0),
-                  items: list.map<DropdownMenuItem<String>>(
+                  items: countries.map<DropdownMenuItem<String>>(
                     (String value) {
                       return DropdownMenuItem<String>(
                         value: value,
                         child: Text(
                           value,
                           style: const TextStyle(
-                              color: Colors.white,
-                              fontFamily: AppTextStyle.poppinsRegular,
-                              fontSize: 17.0),
+                            color: Colors.white,
+                            fontFamily: AppTextStyle.poppinsRegular,
+                            fontSize: 17.0,
+                          ),
                         ),
                       );
                     },
@@ -98,19 +107,7 @@ class AccountVerificationPage extends StatelessWidget {
                     color: Colors.white),
               ),
               const SizedBox(height: 22.0),
-              ListView(
-                shrinkWrap: true,
-                children: [
-                  ...DocumentType.values
-                      .map(
-                        (e) => DocumentItem(
-                          type: e,
-                          onItemClicked: (isSelected) {},
-                        ),
-                      )
-                      .toList()
-                ],
-              ),
+              DocumentOption(onDocumentSelected: (type) {}),
               const Spacer(),
               CommonCheckbox(
                 content: Text(

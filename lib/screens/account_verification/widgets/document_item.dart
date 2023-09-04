@@ -4,6 +4,7 @@ import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
+import 'package:fox_crypto_ui/screens/account_verification/widgets/document_option.dart';
 
 enum DocumentType {
   identifyCard,
@@ -12,14 +13,12 @@ enum DocumentType {
 }
 
 class DocumentItem extends StatefulWidget {
-  final DocumentType type;
-  final bool isSelected;
-  final Function(bool) onItemClicked;
+  final DocumentState documentState;
+  final Function() onItemClicked;
 
   const DocumentItem({
     super.key,
-    required this.type,
-    this.isSelected = false,
+    required this.documentState,
     required this.onItemClicked,
   });
 
@@ -30,14 +29,11 @@ class DocumentItem extends StatefulWidget {
 }
 
 class _DocumentItem extends State<DocumentItem> {
-  bool isSelected = false;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        isSelected = !isSelected;
-        widget.onItemClicked(isSelected);
-        setState(() {});
+        widget.onItemClicked();
       },
       child: Container(
         margin: const EdgeInsets.only(bottom: 8.0),
@@ -46,23 +42,28 @@ class _DocumentItem extends State<DocumentItem> {
           shape: BoxShape.rectangle,
           borderRadius: BorderRadius.circular(13.0),
           border: Border.all(
-            color: isSelected ? AppColors.primary : AppColors.placeHolder,
+            color: widget.documentState.isSelected
+                ? AppColors.primary
+                : AppColors.placeHolder,
           ),
         ),
         child: Row(
           children: [
             SvgPicture.asset(
-              documentImagePath(widget.type),
-              color: isSelected ? AppColors.primary : AppColors.placeHolder,
+              documentImagePath(widget.documentState.type),
+              color: widget.documentState.isSelected
+                  ? AppColors.primary
+                  : AppColors.placeHolder,
             ),
             const SizedBox(width: 8.0),
             Text(
-              documentName(widget.type),
+              documentName(widget.documentState.type),
               style: TextStyle(
                   fontFamily: AppTextStyle.poppinsRegular,
                   fontSize: 15.0,
-                  color:
-                      isSelected ? AppColors.primary : AppColors.placeHolder),
+                  color: widget.documentState.isSelected
+                      ? AppColors.primary
+                      : AppColors.placeHolder),
             )
           ],
         ),
