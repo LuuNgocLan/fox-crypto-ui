@@ -22,13 +22,16 @@ This is a very simple app created for beginners.
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/770972dd-f842-49d2-b8ad-1ccb34ebfa37" width="200"/>
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/fb6ace47-57d0-46be-9654-dddae6952dea" width="200"/>
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/07027762-43a2-4aa7-87ab-8f53437d4286" width="200"/>
+<img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/57f19d9c-9b65-4785-8493-cdd7e997c4ed" width="200"/>
+<img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/d0366ebb-c3b9-47ad-8fd1-4d43499de6f7" width="200"/>
+
 	
 			
 ## Getting Started
 For help getting started with Flutter, view our online documentation.
 
 Develop
-- Make sure to finish install Flutter successfully
+- Make sure to finish installing Flutter successfully
 
 - Clone this repo by:
 ```
