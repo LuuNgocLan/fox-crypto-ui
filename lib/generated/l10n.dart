@@ -459,6 +459,96 @@ class S {
       args: [],
     );
   }
+
+  /// `Upload Image of  ID Card`
+  String get upload_image_of_id_card {
+    return Intl.message(
+      'Upload Image of  ID Card',
+      name: 'upload_image_of_id_card',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload front page`
+  String get upload_front_page {
+    return Intl.message(
+      'Upload front page',
+      name: 'upload_front_page',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload back page`
+  String get upload_back_page {
+    return Intl.message(
+      'Upload back page',
+      name: 'upload_back_page',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Goverment-issued`
+  String get goverment_issued {
+    return Intl.message(
+      'Goverment-issued',
+      name: 'goverment_issued',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Original full-size, unedited document`
+  String get original_full_size_unedited_document {
+    return Intl.message(
+      'Original full-size, unedited document',
+      name: 'original_full_size_unedited_document',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Place documents against a single-coloured background`
+  String get place_documents_against_a_single_coloured_background {
+    return Intl.message(
+      'Place documents against a single-coloured background',
+      name: 'place_documents_against_a_single_coloured_background',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Readable, well-lit, coloured images`
+  String get readable_well_lit_coloured_images {
+    return Intl.message(
+      'Readable, well-lit, coloured images',
+      name: 'readable_well_lit_coloured_images',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No black and white images`
+  String get no_black_and_white_images {
+    return Intl.message(
+      'No black and white images',
+      name: 'no_black_and_white_images',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No edited or expired documents`
+  String get no_edited_or_expired_documents {
+    return Intl.message(
+      'No edited or expired documents',
+      name: 'no_edited_or_expired_documents',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

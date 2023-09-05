@@ -39,5 +39,14 @@
     "passport": "Passport",
     "driver_license": "Driver’s License",
     "verify_account_checkbox": "This information is used for identity verification only, and will be kept secure by CrypCoin",
-    "continue_action": "Continue"
+    "continue_action": "Continue",
+    "upload_image_of_id_card": "Upload Image of  ID Card",
+    "upload_front_page": "Upload front page",
+    "upload_back_page": "Upload back page",
+    "goverment_issued": "Goverment-issued",
+    "original_full_size_unedited_document": "Original full-size, unedited document",
+    "place_documents_against_a_single_coloured_background": "Place documents against a single-coloured background",
+    "readable_well_lit_coloured_images": "Readable, well-lit, coloured images",
+    "no_black_and_white_images": "No black and white images",
+    "no_edited_or_expired_documents": "No edited or expired documents"
 }

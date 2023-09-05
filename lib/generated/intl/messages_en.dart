@@ -47,19 +47,34 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "get_started_title":
             MessageLookupByLibrary.simpleMessage("Fast and Flexible \nTrading"),
+        "goverment_issued":
+            MessageLookupByLibrary.simpleMessage("Goverment-issued"),
         "identify_card": MessageLookupByLibrary.simpleMessage("Identify Card"),
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "new_to_foxcrypto":
             MessageLookupByLibrary.simpleMessage("New to Foxcrypto?"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
+        "no_black_and_white_images":
+            MessageLookupByLibrary.simpleMessage("No black and white images"),
+        "no_edited_or_expired_documents": MessageLookupByLibrary.simpleMessage(
+            "No edited or expired documents"),
+        "original_full_size_unedited_document":
+            MessageLookupByLibrary.simpleMessage(
+                "Original full-size, unedited document"),
         "passport": MessageLookupByLibrary.simpleMessage("Passport"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "password_hint":
             MessageLookupByLibrary.simpleMessage("Enter your password"),
         "password_rule": MessageLookupByLibrary.simpleMessage(
             "At least 8 characters with uppercase letters and numbers"),
+        "place_documents_against_a_single_coloured_background":
+            MessageLookupByLibrary.simpleMessage(
+                "Place documents against a single-coloured background"),
         "privacy_policy":
             MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+        "readable_well_lit_coloured_images":
+            MessageLookupByLibrary.simpleMessage(
+                "Readable, well-lit, coloured images"),
         "resend_code": MessageLookupByLibrary.simpleMessage("Resend Code"),
         "see_all": MessageLookupByLibrary.simpleMessage("See All"),
         "select_country":
@@ -76,6 +91,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "total_balance": MessageLookupByLibrary.simpleMessage("Total Balance"),
         "transaction_security":
             MessageLookupByLibrary.simpleMessage("Transaction \nSecurity "),
+        "upload_back_page":
+            MessageLookupByLibrary.simpleMessage("Upload back page"),
+        "upload_front_page":
+            MessageLookupByLibrary.simpleMessage("Upload front page"),
+        "upload_image_of_id_card":
+            MessageLookupByLibrary.simpleMessage("Upload Image of  ID Card"),
         "verification": MessageLookupByLibrary.simpleMessage("Verification"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "verify_account":

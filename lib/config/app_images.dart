@@ -18,4 +18,7 @@ class AppImages {
   static const icIdentityCard = '$path/ic_identity_card.svg';
   static const icPassport = '$path/ic_passport.svg';
   static const icDrivenLicense = '$path/ic_driven_license.svg';
+  static const icCheck = '$path/ic_check.svg';
+  static const icWrong = '$path/ic_wrong.svg';
+  static const icCamera = '$path/ic_camera.svg';
 }

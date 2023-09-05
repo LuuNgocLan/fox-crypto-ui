@@ -3,6 +3,7 @@ import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/data/data_source.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
+import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/screens/account_verification/widgets/document_option.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
@@ -78,7 +79,9 @@ class _AccountVerificationPage extends State<AccountVerificationPage> {
               const SizedBox(height: 22.0),
               CommonButton(
                 label: S.current.continue_action,
-                onAction: () {},
+                onAction: () {
+                  Navigator.pushNamed(context, Routes.accountVerifyStep2);
+                },
               ),
               const SizedBox(height: 40.0),
             ],
