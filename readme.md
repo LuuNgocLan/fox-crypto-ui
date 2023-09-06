@@ -1,6 +1,10 @@
 # Simple Crypto UI
 
-This is a very simple app created for beginners.
+This is a very simple app created for beginners and free to contribute
+
+⚡ Technologies
+
+<img src="https://camo.githubusercontent.com/2bcc08fbcace97f1e37008b2561e36751b72f76844bc083e14514c97f84d7a85/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f62696c652d466c75747465722d3032353639423f6c6f676f3d466c7574746572267374796c653d666f722d7468652d6261646765" alt="Tech Stack" data-canonical-src="https://img.shields.io/badge/Mobile-Flutter-02569B?logo=Flutter&amp;style=for-the-badge" style="max-width: 100%;">
 
 ## Design Inspiration
 
@@ -50,3 +54,36 @@ flutter run
 
 ## Packages
 ...
+
+## Features and Roadmap
+I picked an initial due date to help motivate me to finish the work on schedule
+
+1.0 - Simple Crypto UI - Aug 26 - Sep 17, 2023
+- [x] Completed Basic UI
+- [ ] Camera Function
+- [ ] Integrate Flutter Riverpod
+- [ ] Add Local data 
+
+## Contributing
+If you have any ideas, just open an issue and tell me what you think.
+
+If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
+
+## Semantic Commit Messages
+See how a minor change to your commit message style can make you a better programmer.
+
+Format: `<type>(<scope>): <subject>`
+
+`<scope>` is optional
+
+### More Type Examples:
+
+- feat: (new feature for the user, not a new feature for build script)
+- fix: (bug fix for the user, not a fix to a build script)
+- docs: (changes to the documentation)
+- style: (formatting, missing semi colons, etc; no production code change)
+- refactor: (refactoring production code, eg. renaming a variable)
+- test: (adding missing tests, refactoring tests; no production code change)
+- chore: (updating grunt tasks etc; no production code change)
+
+See more: https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
