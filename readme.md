@@ -24,7 +24,9 @@ This is a very simple app created for beginners.
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/07027762-43a2-4aa7-87ab-8f53437d4286" width="200"/>
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/57f19d9c-9b65-4785-8493-cdd7e997c4ed" width="200"/>
 <img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/d0366ebb-c3b9-47ad-8fd1-4d43499de6f7" width="200"/>
-
+<img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/e0f168e3-c618-45e9-9f11-0129aa916055" width="200"/>
+<img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/ff473a7d-9f4b-4a58-b90e-a5a219347f72" width="200"/>
+<img src="https://github.com/LuuNgocLan/fox-crypto-ui/assets/29207172/5d25433a-4772-4966-bd5d-fb2a26ee5acc" width="200"/>
 	
 			
 ## Getting Started
