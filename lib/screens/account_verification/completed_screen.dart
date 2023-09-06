@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
 import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
+import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 
 class CompletedScreen extends StatelessWidget {
@@ -39,8 +40,11 @@ class CompletedScreen extends StatelessWidget {
             const SizedBox(height: 54),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child:
-                  CommonButton(onAction: () {}, label: S.current.back_to_home),
+              child: CommonButton(
+                  onAction: () {
+                    Navigator.popAndPushNamed(context, Routes.home);
+                  },
+                  label: S.current.back_to_home),
             ),
             const Spacer(),
           ],

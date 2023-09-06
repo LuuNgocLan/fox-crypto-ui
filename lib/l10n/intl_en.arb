@@ -48,5 +48,11 @@
     "place_documents_against_a_single_coloured_background": "Place documents against a single-coloured background",
     "readable_well_lit_coloured_images": "Readable, well-lit, coloured images",
     "no_black_and_white_images": "No black and white images",
-    "no_edited_or_expired_documents": "No edited or expired documents"
+    "no_edited_or_expired_documents": "No edited or expired documents",
+    "take_selfie_photo": "Take Selfie Photo",
+    "upload_portrait_photo": "Upload portrait photo",
+    "take_a_selfie_of_yourself_with_a_neutral_expression": "Take a selfie of yourself with a neutral expression",
+    "make_sure_your_whole_face_is_visible_centred_and_your_eyes_are_open": "Make sure your whole face is visible, centred, and your eyes are open",
+    "do_not_crop_your_id_or_screenshots_of_your_id": "Do not crop your ID or screenshots of your ID",
+    "do_not_hide_or_alter_parts_of_your_face": "Do not hide or alter parts of your face (No hats/ beauty images/ filters/ headgear)"
 }

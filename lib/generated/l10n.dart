@@ -549,6 +549,68 @@ class S {
       args: [],
     );
   }
+
+  /// `Take Selfie Photo`
+  String get take_selfie_photo {
+    return Intl.message(
+      'Take Selfie Photo',
+      name: 'take_selfie_photo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload portrait photo`
+  String get upload_portrait_photo {
+    return Intl.message(
+      'Upload portrait photo',
+      name: 'upload_portrait_photo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Take a selfie of yourself with a neutral expression`
+  String get take_a_selfie_of_yourself_with_a_neutral_expression {
+    return Intl.message(
+      'Take a selfie of yourself with a neutral expression',
+      name: 'take_a_selfie_of_yourself_with_a_neutral_expression',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make sure your whole face is visible, centred, and your eyes are open`
+  String
+      get make_sure_your_whole_face_is_visible_centred_and_your_eyes_are_open {
+    return Intl.message(
+      'Make sure your whole face is visible, centred, and your eyes are open',
+      name:
+          'make_sure_your_whole_face_is_visible_centred_and_your_eyes_are_open',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do not crop your ID or screenshots of your ID`
+  String get do_not_crop_your_id_or_screenshots_of_your_id {
+    return Intl.message(
+      'Do not crop your ID or screenshots of your ID',
+      name: 'do_not_crop_your_id_or_screenshots_of_your_id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do not hide or alter parts of your face (No hats/ beauty images/ filters/ headgear)`
+  String get do_not_hide_or_alter_parts_of_your_face {
+    return Intl.message(
+      'Do not hide or alter parts of your face (No hats/ beauty images/ filters/ headgear)',
+      name: 'do_not_hide_or_alter_parts_of_your_face',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -9,39 +9,30 @@ import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
 import 'package:fox_crypto_ui/shared_view/common_checkbox.dart';
 
-enum CameraFace {
-  front,
-  back,
-}
-
-class UploadDocumentPage extends StatefulWidget {
-  const UploadDocumentPage({super.key});
+class SelfiePhotoPage extends StatefulWidget {
+  const SelfiePhotoPage({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return _UploadDocumentPage();
+    return _SelfiePhotoPage();
   }
 }
 
-class _UploadDocumentPage extends State<UploadDocumentPage> {
+class _SelfiePhotoPage extends State<SelfiePhotoPage> {
   List<Rule> rules = [
-    Rule(imagePath: AppImages.icCheck, content: S.current.goverment_issued),
     Rule(
         imagePath: AppImages.icCheck,
-        content: S.current.original_full_size_unedited_document),
+        content: S.current.take_a_selfie_of_yourself_with_a_neutral_expression),
     Rule(
         imagePath: AppImages.icCheck,
-        content:
-            S.current.place_documents_against_a_single_coloured_background),
-    Rule(
-        imagePath: AppImages.icCheck,
-        content: S.current.readable_well_lit_coloured_images),
+        content: S.current
+            .make_sure_your_whole_face_is_visible_centred_and_your_eyes_are_open),
     Rule(
         imagePath: AppImages.icWrong,
-        content: S.current.no_black_and_white_images),
+        content: S.current.do_not_crop_your_id_or_screenshots_of_your_id),
     Rule(
         imagePath: AppImages.icWrong,
-        content: S.current.no_edited_or_expired_documents),
+        content: S.current.do_not_hide_or_alter_parts_of_your_face),
   ];
 
   @override
@@ -73,16 +64,14 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
                   children: [
                     const SizedBox(height: 26.0),
                     Text(
-                      S.current.upload_image_of_id_card,
+                      S.current.take_selfie_photo,
                       style: const TextStyle(
                           fontFamily: AppTextStyle.poppinsSemiBold,
                           fontSize: 17.0,
                           color: Colors.white),
                     ),
                     const SizedBox(height: 22.0),
-                    _cameraFace(CameraFace.front),
-                    const SizedBox(height: 22.0),
-                    _cameraFace(CameraFace.back),
+                    _cameraFace(),
                     const SizedBox(height: 30.0),
                     ListView(
                       shrinkWrap: true,
@@ -146,7 +135,7 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
           CommonButton(
             label: S.current.continue_action,
             onAction: () {
-              Navigator.pushNamed(context, Routes.accountVerifyStep3);
+              Navigator.pushNamed(context, Routes.completed);
             },
           ),
           const SizedBox(height: 40.0),
@@ -155,7 +144,7 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
     );
   }
 
-  Widget _cameraFace(CameraFace type) {
+  Widget _cameraFace() {
     return Container(
       width: double.infinity,
       height: 133.0,
@@ -171,9 +160,7 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
             SvgPicture.asset(AppImages.icCamera),
             const SizedBox(height: 8.0),
             Text(
-              type == CameraFace.front
-                  ? S.current.upload_front_page
-                  : S.current.upload_back_page,
+              S.current.upload_portrait_photo,
               style: const TextStyle(
                 fontFamily: AppTextStyle.poppinsRegular,
                 color: AppColors.placeHolder,

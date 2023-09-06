@@ -36,6 +36,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "create_new_account":
             MessageLookupByLibrary.simpleMessage(" Create an account"),
         "crypto": MessageLookupByLibrary.simpleMessage("crypto"),
+        "do_not_crop_your_id_or_screenshots_of_your_id":
+            MessageLookupByLibrary.simpleMessage(
+                "Do not crop your ID or screenshots of your ID"),
+        "do_not_hide_or_alter_parts_of_your_face":
+            MessageLookupByLibrary.simpleMessage(
+                "Do not hide or alter parts of your face (No hats/ beauty images/ filters/ headgear)"),
         "driver_license":
             MessageLookupByLibrary.simpleMessage("Driver’s License"),
         "email_address": MessageLookupByLibrary.simpleMessage("Email Address"),
@@ -51,6 +57,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Goverment-issued"),
         "identify_card": MessageLookupByLibrary.simpleMessage("Identify Card"),
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
+        "make_sure_your_whole_face_is_visible_centred_and_your_eyes_are_open":
+            MessageLookupByLibrary.simpleMessage(
+                "Make sure your whole face is visible, centred, and your eyes are open"),
         "new_to_foxcrypto":
             MessageLookupByLibrary.simpleMessage("New to Foxcrypto?"),
         "news": MessageLookupByLibrary.simpleMessage("News"),
@@ -85,6 +94,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Select a valid Government-issued document"),
         "sign_up": MessageLookupByLibrary.simpleMessage("Sign up"),
         "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+        "take_a_selfie_of_yourself_with_a_neutral_expression":
+            MessageLookupByLibrary.simpleMessage(
+                "Take a selfie of yourself with a neutral expression"),
+        "take_selfie_photo":
+            MessageLookupByLibrary.simpleMessage("Take Selfie Photo"),
         "tearm_of_use": MessageLookupByLibrary.simpleMessage("Terms of Use"),
         "today_profit": MessageLookupByLibrary.simpleMessage("Today’s Profit"),
         "top_coins": MessageLookupByLibrary.simpleMessage("Top Coins"),
@@ -97,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Upload front page"),
         "upload_image_of_id_card":
             MessageLookupByLibrary.simpleMessage("Upload Image of  ID Card"),
+        "upload_portrait_photo":
+            MessageLookupByLibrary.simpleMessage("Upload portrait photo"),
         "verification": MessageLookupByLibrary.simpleMessage("Verification"),
         "verify": MessageLookupByLibrary.simpleMessage("Verify"),
         "verify_account":
