@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 
 class CardStack extends StatelessWidget {
@@ -50,12 +49,13 @@ class CardStack extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        contentInformation(maxWidth),
+        contentInformation(context, maxWidth),
       ],
     );
   }
 
   Widget contentInformation(
+    BuildContext context,
     double maxWidth,
   ) {
     return Container(
@@ -68,17 +68,17 @@ class CardStack extends StatelessWidget {
         children: [
           Text(
             S.current.total_balance,
-            style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                fontSize: 16.0,
-                color: AppColors.textGray),
+            style: Theme.of(context)
+                .textTheme
+                .bodyMedium
+                ?.copyWith(color: AppColors.textGray),
           ),
           Text(
             "\$" "$totalBalance",
-            style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsSemiBold,
-                fontSize: 36.0,
-                color: AppColors.background),
+            style: Theme.of(context)
+                .textTheme
+                .displayLarge
+                ?.copyWith(color: AppColors.background),
           ),
           const SizedBox(height: 44.0),
           Row(
@@ -88,18 +88,18 @@ class CardStack extends StatelessWidget {
               const SizedBox(width: 4.0),
               Text(
                 "\$" "$todayProfit",
-                style: const TextStyle(
-                    fontFamily: AppTextStyle.poppinsRegular,
-                    fontSize: 15.0,
-                    color: AppColors.background),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyMedium
+                    ?.copyWith(color: AppColors.background),
               ),
               const SizedBox(width: 8.0),
               Text(
                 S.current.today_profit,
-                style: const TextStyle(
-                    fontFamily: AppTextStyle.poppinsRegular,
-                    fontSize: 13.0,
-                    color: AppColors.textGray),
+                style: Theme.of(context)
+                    .textTheme
+                    .bodySmall
+                    ?.copyWith(color: AppColors.textGray),
               ),
             ],
           ),

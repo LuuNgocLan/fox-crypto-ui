@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/config/app_typography.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
@@ -43,11 +43,9 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(height: 4.0),
               Text(
                 S.current.password_rule,
-                style: const TextStyle(
-                  color: AppColors.placeHolder,
-                  fontFamily: AppTextStyle.poppinsRegular,
-                  fontSize: 13.0,
-                ),
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                      color: AppColors.placeHolder,
+                    ),
               ),
               const SizedBox(height: 16.0),
               CommonCheckbox(
@@ -55,39 +53,31 @@ class SignUpPage extends StatelessWidget {
                   selectionColor: AppColors.primary,
                   text: TextSpan(
                     text: "${S.current.accept} ",
-                    style: const TextStyle(
-                      color: AppColors.placeHolder,
-                      fontFamily: AppTextStyle.poppinsRegular,
-                      fontSize: 16.0,
-                    ),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: AppColors.placeHolder,
+                        ),
                     children: [
                       TextSpan(
                         text: S.current.tearm_of_use,
-                        style: const TextStyle(
-                          color: AppColors.primary,
-                          fontFamily: AppTextStyle.poppinsRegular,
-                          fontSize: 16.0,
-                        ),
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: AppColors.primary,
+                            ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             print("Terms of Use");
                           },
                       ),
-                      const TextSpan(
+                      TextSpan(
                         text: " & ",
-                        style: TextStyle(
-                          color: AppColors.placeHolder,
-                          fontFamily: AppTextStyle.poppinsRegular,
-                          fontSize: 16.0,
-                        ),
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: AppColors.placeHolder,
+                            ),
                       ),
                       TextSpan(
                         text: S.current.privacy_policy,
-                        style: const TextStyle(
-                          color: AppColors.primary,
-                          fontFamily: AppTextStyle.poppinsRegular,
-                          fontSize: 16.0,
-                        ),
+                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                              color: AppColors.primary,
+                            ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             print("Privacy Policy");
@@ -113,19 +103,16 @@ class SignUpPage extends StatelessWidget {
                 selectionColor: AppColors.primary,
                 text: TextSpan(
                   text: S.current.already_have_an_account,
-                  style: const TextStyle(
-                    color: AppColors.placeHolder,
-                    fontFamily: AppTextStyle.poppinsRegular,
-                    fontSize: 16.0,
-                  ),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: AppColors.placeHolder,
+                      ),
                   children: [
                     TextSpan(
                       text: " ${S.current.login}!",
-                      style: const TextStyle(
-                        color: AppColors.primary,
-                        fontFamily: AppTextStyle.poppinsMedium,
-                        fontSize: 16.0,
-                      ),
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: AppColors.primary,
+                            fontFamily: AppTypography.poppinsMedium,
+                          ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           print("Log in!");

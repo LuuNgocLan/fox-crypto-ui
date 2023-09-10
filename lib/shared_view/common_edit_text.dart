@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/config/app_typography.dart';
 
 class CommonEditText extends StatefulWidget {
   final String label;
@@ -29,11 +29,10 @@ class _CommonEditText extends State<CommonEditText> {
       children: [
         Text(
           widget.label,
-          style: const TextStyle(
-            color: AppColors.placeHolder,
-            fontFamily: AppTextStyle.poppinsMedium,
-            fontSize: 16.0,
-          ),
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: AppColors.placeHolder,
+                fontFamily: AppTypography.poppinsMedium,
+              ),
         ),
         const SizedBox(height: 4.0),
         Container(
@@ -42,11 +41,9 @@ class _CommonEditText extends State<CommonEditText> {
               borderRadius: BorderRadius.circular(12.0)),
           child: TextFormField(
             obscureText: widget.isPassword ? isHidePassword : false,
-            style: const TextStyle(
-              fontFamily: AppTextStyle.poppinsRegular,
-              fontSize: 18.0,
-              color: AppColors.textColor,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                  color: AppColors.textColor,
+                ),
             maxLines: 1,
             keyboardType: widget.isPassword
                 ? TextInputType.visiblePassword
@@ -68,11 +65,9 @@ class _CommonEditText extends State<CommonEditText> {
                     )
                   : null,
               hintText: widget.hintText,
-              hintStyle: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                fontSize: 18.0,
-                color: AppColors.hintTextColor,
-              ),
+              hintStyle: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    color: AppColors.hintTextColor,
+                  ),
             ),
           ),
         ),

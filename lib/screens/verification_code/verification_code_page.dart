@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/screens/verification_code/widgets/input_code.dart';
@@ -33,19 +32,15 @@ class VerificationCodePage extends StatelessWidget {
               const SizedBox(height: 24.0),
               Text(
                 S.current.code_have_been_sent_to_email,
-                style: const TextStyle(
-                  fontFamily: AppTextStyle.poppinsRegular,
-                  color: AppColors.placeHolder,
-                  fontSize: 16.0,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: AppColors.placeHolder,
+                    ),
               ),
-              const Text(
+              Text(
                 "johny@gmail.com",
-                style: TextStyle(
-                  fontFamily: AppTextStyle.poppinsRegular,
-                  color: AppColors.textColor,
-                  fontSize: 16.0,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: AppColors.textColor,
+                    ),
               ),
               const SizedBox(height: 48.0),
               InputCode(
@@ -78,11 +73,9 @@ class VerificationCodePage extends StatelessWidget {
                 child: Center(
                   child: Text(
                     S.current.resend_code,
-                    style: const TextStyle(
-                      fontFamily: AppTextStyle.poppinsSemiBold,
-                      color: AppColors.primary,
-                      fontSize: 18.0,
-                    ),
+                    style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                          color: AppColors.primary,
+                        ),
                   ),
                 ),
               ),

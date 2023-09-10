@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 
 class InputCode extends StatefulWidget {
   final Function(String) onSubmitValue;
@@ -47,11 +46,9 @@ class _InputCode extends State<InputCode> {
         },
         textAlign: TextAlign.center,
         textAlignVertical: TextAlignVertical.center,
-        style: const TextStyle(
-          fontFamily: AppTextStyle.poppinsSemiBold,
-          fontSize: 27.0,
-          color: AppColors.textColor,
-        ),
+        style: Theme.of(context).textTheme.displayMedium?.copyWith(
+              color: AppColors.textColor,
+            ),
         keyboardType: TextInputType.number,
         inputFormatters: [
           LengthLimitingTextInputFormatter(1),

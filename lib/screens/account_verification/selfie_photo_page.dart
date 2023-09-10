@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
@@ -63,13 +62,11 @@ class _SelfiePhotoPage extends State<SelfiePhotoPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 26.0),
-                    Text(
-                      S.current.take_selfie_photo,
-                      style: const TextStyle(
-                          fontFamily: AppTextStyle.poppinsSemiBold,
-                          fontSize: 17.0,
-                          color: Colors.white),
-                    ),
+                    Text(S.current.take_selfie_photo,
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleSmall
+                            ?.copyWith(color: Colors.white)),
                     const SizedBox(height: 22.0),
                     _cameraFace(),
                     const SizedBox(height: 30.0),
@@ -88,12 +85,12 @@ class _SelfiePhotoPage extends State<SelfiePhotoPage> {
                                       Expanded(
                                         child: Text(
                                           e.content,
-                                          style: const TextStyle(
-                                            fontFamily:
-                                                AppTextStyle.poppinsRegular,
-                                            color: AppColors.placeHolder,
-                                            fontSize: 15.0,
-                                          ),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                color: AppColors.placeHolder,
+                                              ),
                                         ),
                                       )
                                     ],
@@ -123,11 +120,9 @@ class _SelfiePhotoPage extends State<SelfiePhotoPage> {
           CommonCheckbox(
             content: Text(
               S.current.verify_account_checkbox,
-              style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                fontSize: 13.0,
-                color: AppColors.placeHolder,
-              ),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.placeHolder,
+                  ),
             ),
             onPressed: (value) {},
           ),
@@ -161,11 +156,9 @@ class _SelfiePhotoPage extends State<SelfiePhotoPage> {
             const SizedBox(height: 8.0),
             Text(
               S.current.upload_portrait_photo,
-              style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                color: AppColors.placeHolder,
-                fontSize: 13.0,
-              ),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.placeHolder,
+                  ),
             )
           ],
         ),

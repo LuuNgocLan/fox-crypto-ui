@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/data/models/onboading.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
@@ -43,10 +42,10 @@ class OnboardingPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   S.current.skip,
-                  style: const TextStyle(
-                      fontSize: 20,
-                      fontFamily: AppTextStyle.poppinsRegular,
-                      color: AppColors.primary),
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelMedium
+                      ?.copyWith(color: AppColors.primary),
                 ),
               ),
             ),

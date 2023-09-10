@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 
 class SlideItem extends StatelessWidget {
   final String imagePath;
@@ -25,17 +24,17 @@ class SlideItem extends StatelessWidget {
           child: RichText(
             text: TextSpan(
               text: normalText,
-              style: const TextStyle(
-                  fontSize: 36,
-                  fontFamily: AppTextStyle.poppinsSemiBold,
-                  color: AppColors.textColor),
+              style: Theme.of(context)
+                  .textTheme
+                  .displayLarge
+                  ?.copyWith(color: AppColors.textColor),
               children: <TextSpan>[
                 TextSpan(
                   text: coloredText ?? "",
-                  style: const TextStyle(
-                      fontSize: 36,
-                      fontFamily: AppTextStyle.poppinsSemiBold,
-                      color: AppColors.primary),
+                  style: Theme.of(context)
+                      .textTheme
+                      .displayLarge
+                      ?.copyWith(color: AppColors.primary),
                 ),
               ],
             ),

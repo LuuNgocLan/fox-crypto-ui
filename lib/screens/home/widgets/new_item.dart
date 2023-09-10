@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/config/app_typography.dart';
 import 'package:fox_crypto_ui/data/models/news.dart';
 
 class NewsItem extends StatelessWidget {
@@ -42,9 +42,8 @@ class NewsItem extends StatelessWidget {
                   Text(
                     news.title,
                     maxLines: 3,
-                    style: const TextStyle(
-                        fontFamily: AppTextStyle.poppinsMedium,
-                        fontSize: 16.0,
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        fontFamily: AppTypography.poppinsMedium,
                         color: Colors.white),
                   ),
                   const SizedBox(height: 8.0),
@@ -52,17 +51,17 @@ class NewsItem extends StatelessWidget {
                     child: RichText(
                       text: TextSpan(
                         text: news.author,
-                        style: const TextStyle(
-                            fontFamily: AppTextStyle.poppinsRegular,
-                            fontSize: 13.0,
-                            color: AppColors.primary),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodySmall
+                            ?.copyWith(color: AppColors.primary),
                         children: [
                           TextSpan(
                             text: " • ${news.time}",
-                            style: const TextStyle(
-                                fontFamily: AppTextStyle.poppinsRegular,
-                                fontSize: 13.0,
-                                color: AppColors.placeHolder),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodySmall
+                                ?.copyWith(color: AppColors.placeHolder),
                           ),
                         ],
                       ),

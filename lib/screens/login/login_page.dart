@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
@@ -41,11 +40,9 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 12.0),
               Text(
                 S.current.forgot_password,
-                style: const TextStyle(
-                  color: AppColors.primary,
-                  fontFamily: AppTextStyle.poppinsRegular,
-                  fontSize: 16.0,
-                ),
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: AppColors.primary,
+                    ),
               ),
               const SizedBox(height: 72.0),
               CommonButton(
@@ -61,19 +58,16 @@ class LoginPage extends StatelessWidget {
                   selectionColor: AppColors.primary,
                   text: TextSpan(
                     text: S.current.new_to_foxcrypto,
-                    style: const TextStyle(
-                      color: AppColors.placeHolder,
-                      fontFamily: AppTextStyle.poppinsRegular,
-                      fontSize: 16.0,
-                    ),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                          color: AppColors.placeHolder,
+                        ),
                     children: [
                       TextSpan(
                         text: S.current.create_new_account,
-                        style: const TextStyle(
-                          color: AppColors.primary,
-                          fontFamily: AppTextStyle.poppinsMedium,
-                          fontSize: 16.0,
-                        ),
+                        style:
+                            Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                  color: AppColors.primary,
+                                ),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             Navigator.popAndPushNamed(context, Routes.signup);

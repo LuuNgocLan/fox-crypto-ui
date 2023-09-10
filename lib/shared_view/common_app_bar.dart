@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 
 class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -26,15 +25,13 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       title: Text(
         title,
-        style: const TextStyle(
-          fontFamily: AppTextStyle.poppinsSemiBold,
-          fontSize: 20.0,
-          color: Colors.white,
-        ),
+        style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              color: Colors.white,
+            ),
       ),
     );
   }
-  
+
   @override
   Size get preferredSize => Size.fromHeight(height);
 }

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/screens/account_verification/widgets/document_option.dart';
 
@@ -58,9 +57,7 @@ class _DocumentItem extends State<DocumentItem> {
             const SizedBox(width: 8.0),
             Text(
               documentName(widget.documentState.type),
-              style: TextStyle(
-                  fontFamily: AppTextStyle.poppinsRegular,
-                  fontSize: 15.0,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: widget.documentState.isSelected
                       ? AppColors.primary
                       : AppColors.placeHolder),

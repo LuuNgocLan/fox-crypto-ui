@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/data/models/coin.dart';
 import 'package:fox_crypto_ui/screens/home/widgets/trend_paint.dart';
 
@@ -35,10 +34,10 @@ class CoinItem extends StatelessWidget {
                 child: Text(
                   coin.name,
                   overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                      fontFamily: AppTextStyle.poppinsSemiBold,
-                      fontSize: 18.0,
-                      color: Colors.white),
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleSmall
+                      ?.copyWith(color: Colors.white),
                 ),
               ),
             ],
@@ -46,18 +45,18 @@ class CoinItem extends StatelessWidget {
           const SizedBox(height: 8.0),
           Text(
             "\$ ${coin.cost}",
-            style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                fontSize: 18.0,
-                color: AppColors.placeHolder),
+            style: Theme.of(context)
+                .textTheme
+                .bodyLarge
+                ?.copyWith(color: AppColors.placeHolder),
           ),
           const SizedBox(height: 2.0),
           Text(
             "${coin.changedValue}% ▲", //▼
-            style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                fontSize: 13.0,
-                color: Color(0xff00C566)),
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall
+                ?.copyWith(color: Color(0xff00C566)),
           ),
           const SizedBox(height: 20.0),
           Expanded(

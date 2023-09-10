@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
+import 'package:fox_crypto_ui/config/app_typography.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
             statusBarBrightness: Brightness.dark,
           ),
         ),
+        textTheme: AppTypography.textTheme,
       ),
       localizationsDelegates: const [
         S.delegate,

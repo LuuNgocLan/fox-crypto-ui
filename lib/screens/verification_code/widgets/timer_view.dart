@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_constants.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
+import 'package:fox_crypto_ui/config/app_typography.dart';
 
 class TimerView extends StatefulWidget {
   final VoidCallback onCompleted;
@@ -53,11 +53,10 @@ class _TimerView extends State<TimerView> {
   Widget build(BuildContext context) {
     return Text(
       secondsToMinuteAndSeconds(second),
-      style: const TextStyle(
-        fontFamily: AppTextStyle.poppinsMedium,
-        color: AppColors.placeHolder,
-        fontSize: 16.0,
-      ),
+      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+            fontFamily: AppTypography.poppinsMedium,
+            color: AppColors.placeHolder,
+          ),
     );
   }
 

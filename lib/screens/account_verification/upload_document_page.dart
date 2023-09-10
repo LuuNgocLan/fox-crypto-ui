@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_app_bar.dart';
@@ -72,13 +71,11 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const SizedBox(height: 26.0),
-                    Text(
-                      S.current.upload_image_of_id_card,
-                      style: const TextStyle(
-                          fontFamily: AppTextStyle.poppinsSemiBold,
-                          fontSize: 17.0,
-                          color: Colors.white),
-                    ),
+                    Text(S.current.upload_image_of_id_card,
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleSmall
+                            ?.copyWith(color: Colors.white)),
                     const SizedBox(height: 22.0),
                     _cameraFace(CameraFace.front),
                     const SizedBox(height: 22.0),
@@ -99,12 +96,12 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
                                       Expanded(
                                         child: Text(
                                           e.content,
-                                          style: const TextStyle(
-                                            fontFamily:
-                                                AppTextStyle.poppinsRegular,
-                                            color: AppColors.placeHolder,
-                                            fontSize: 15.0,
-                                          ),
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .bodyMedium
+                                              ?.copyWith(
+                                                color: AppColors.placeHolder,
+                                              ),
                                         ),
                                       )
                                     ],
@@ -134,11 +131,9 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
           CommonCheckbox(
             content: Text(
               S.current.verify_account_checkbox,
-              style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                fontSize: 13.0,
-                color: AppColors.placeHolder,
-              ),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.placeHolder,
+                  ),
             ),
             onPressed: (value) {},
           ),
@@ -174,11 +169,9 @@ class _UploadDocumentPage extends State<UploadDocumentPage> {
               type == CameraFace.front
                   ? S.current.upload_front_page
                   : S.current.upload_back_page,
-              style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                color: AppColors.placeHolder,
-                fontSize: 13.0,
-              ),
+              style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: AppColors.placeHolder,
+                  ),
             )
           ],
         ),

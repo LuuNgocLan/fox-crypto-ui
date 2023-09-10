@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_colors.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 
 class CommonButton extends StatelessWidget {
   final VoidCallback? onAction;
@@ -28,10 +27,19 @@ class CommonButton extends StatelessWidget {
                 shape: const RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(Radius.circular(12)),
                 ),
+                textStyle: Theme.of(context)
+                    .textTheme
+                    .labelMedium
+                    ?.copyWith(color: AppColors.secondary),
               ),
               onPressed: onAction,
-              child: labelButton(),
-            )
+              child: Text(
+                label,
+                style: Theme.of(context)
+                    .textTheme
+                    .labelMedium
+                    ?.copyWith(color: AppColors.primary),
+              ))
           : FilledButton(
               style: FilledButton.styleFrom(
                 shape: const RoundedRectangleBorder(
@@ -39,16 +47,14 @@ class CommonButton extends StatelessWidget {
                 ),
               ),
               onPressed: onAction,
-              child: labelButton(),
+              child: Text(
+                label,
+                style: Theme.of(context)
+                    .textTheme
+                    .labelMedium
+                    ?.copyWith(color: AppColors.secondary),
+              ),
             ),
     );
   }
-
-  Widget labelButton() => Text(
-        label,
-        style: const TextStyle(
-          fontSize: 20.0,
-          fontFamily: AppTextStyle.poppinsMedium,
-        ),
-      );
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fox_crypto_ui/config/app_images.dart';
-import 'package:fox_crypto_ui/config/app_text_style.dart';
 import 'package:fox_crypto_ui/generated/l10n.dart';
 import 'package:fox_crypto_ui/routes/routes.dart';
 import 'package:fox_crypto_ui/shared_view/common_button.dart';
@@ -21,20 +20,16 @@ class CompletedScreen extends StatelessWidget {
             const SizedBox(height: 16.0),
             Text(
               S.current.completed_title,
-              style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsSemiBold,
-                fontSize: 26,
-                color: Colors.white,
-              ),
+              style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                    color: Colors.white,
+                  ),
             ),
             const SizedBox(height: 8.0),
             Text(
               S.current.completed_msg,
-              style: const TextStyle(
-                fontFamily: AppTextStyle.poppinsRegular,
-                fontSize: 16,
-                color: Colors.white,
-              ),
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Colors.white,
+                  ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 54),
